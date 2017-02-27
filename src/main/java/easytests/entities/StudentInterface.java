@@ -14,5 +14,5 @@ public interface StudentInterface extends IdentityInterface {
 
     GroupInterface getGroup();
 
-    StudentInterface setGroup(GroupInterface group);
+    StudentInterface setGroup(Group group);
 }

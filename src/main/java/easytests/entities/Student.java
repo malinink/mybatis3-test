@@ -10,7 +10,7 @@ public class Student implements StudentInterface {
 
     private String name;
 
-    private GroupInterface group;
+    private Group group;
 
     public Integer getId() {
         return this.id;
@@ -34,7 +34,7 @@ public class Student implements StudentInterface {
         return group;
     }
 
-    public StudentInterface setGroup(GroupInterface group) {
+    public StudentInterface setGroup(Group group) {
         this.group = group;
         return this;
     }
