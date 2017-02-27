@@ -17,7 +17,7 @@ public interface StudentsMapper {
         {
             @Result(property = "id", column = "id"),
             @Result(property = "name", column = "name"),
-            //@Result(property = "group.id", column = "group_id")
+            @Result(property = "group.id", column = "group_id", javaType = Group.class, typeHandler = ObjectTypeHandler.class)
             /*
                 @Result(
                     property = "group",
