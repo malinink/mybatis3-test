@@ -14,7 +14,6 @@ import org.apache.ibatis.type.ArrayTypeHandler;
 @Mapper
 public interface StudentsMapper {
 
-
     @Results(
         {
             @Result(property = "id", column = "id"),
