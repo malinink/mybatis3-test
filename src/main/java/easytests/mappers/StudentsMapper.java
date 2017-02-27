@@ -2,6 +2,7 @@ package easytests.mappers;
 
 import easytests.entities.Group;
 import easytests.entities.Student;
+import easytests.entities.StudentInterface;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
 import org.apache.ibatis.type.ObjectTypeHandler;
@@ -12,6 +13,7 @@ import org.apache.ibatis.type.ArrayTypeHandler;
  */
 @Mapper
 public interface StudentsMapper {
+
 
     @Results(
         {
@@ -30,5 +32,6 @@ public interface StudentsMapper {
         })
 
     @Select("SELECT id, name, group_id FROM students WHERE id = #{id}")
-    Student find(Integer id);
+    @ResultType(Student.class)
+    StudentInterface find(Integer id);
 }
